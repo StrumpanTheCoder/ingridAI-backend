@@ -11,7 +11,12 @@ about_me = {
     "interests": ["AI", "coding", "philosophing"],
 }
 
+
+@app.route("/")
+def home():
+    return "Welcome to Ingrid's AI Backend!"
 @app.route("/ask", methods=["POST"])
+
 def ask_ai():
     user_input = request.json.get("question", "").lower()
     if "name" in user_input:
