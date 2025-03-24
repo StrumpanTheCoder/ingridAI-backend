@@ -1,4 +1,5 @@
 # filepath: ai-backend/app.py
+import os  # Import the os module
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
