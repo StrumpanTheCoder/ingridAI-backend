@@ -23,4 +23,6 @@ def ask_ai():
         return jsonify({"response": "I'm not sure how to answer that, but feel free to ask more!"})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+       # Get the port from the environment variable or default to 5000
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
