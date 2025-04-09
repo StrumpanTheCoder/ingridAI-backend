@@ -1,8 +1,10 @@
 # filepath: ai-backend/app.py
 import os  # Import the os module
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Example data about you
 about_me = {
